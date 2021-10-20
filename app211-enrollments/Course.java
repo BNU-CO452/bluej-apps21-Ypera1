@@ -5,14 +5,17 @@ import java.util.*;
  * at BNU together with a list of student who are enrolled
  *
  * @author Derek Peacock
- * @version 1.0 14/07/2021
+ * @modified Connor Martin
+ * @version 1.01 20/10/2021
  */
 public class Course
 {
     // A unique identifier e.g. BT1CTG1
-    private String code;
+    public String code;
     // The full title including qualification and subject
-    private String title;
+    public String title;
+    //Assigned Module of Course
+    private Module module;
     
     /**
      * Create a Course with a maximum number of enrolments. 
@@ -22,6 +25,7 @@ public class Course
     {
         this.code = code;
         this.title = title;
+        this.module = null;
     }
 
     
@@ -34,6 +38,11 @@ public class Course
         printHeading();
         
         System.out.println(" Course Code: " + code + ": " + title);
+        if(module != null) {
+            System.out.println(" Module: "+ module.title);
+            System.out.println(" Code: "+ module.code);
+            System.out.println(" Credit: "+ module.credit);
+        }
         System.out.println();
     }
     
@@ -46,5 +55,13 @@ public class Course
         System.out.println("   App211: Course Details");
         System.out.println(" --------------------------------");
         System.out.println();
+    }
+    
+    /**
+     * Sets module of course
+     */
+    public void setModule(Module module) {
+        this.module = module;
+        System.out.println(title + " module set to " + module.title);
     }
 }
