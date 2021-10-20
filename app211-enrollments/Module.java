@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Module here.
+ * Holds information for modules, can be optionally connected to a course.
  *
  * @author (Connor Martin)
  * @version (1.0)
@@ -24,10 +24,22 @@ public class Module
         this.title = title;
     }
 
-    public void getCode() {System.out.println("Module Code is: " + code);}
-    public void getTitle() {System.out.println("Module Title is: " + title);}
-    public void getCredit() {System.out.println("Module Credit is: " +credit);}
+    /**
+     * Gets the respective detail and prints it out
+     */
+    public void getCode() {
+        System.out.println("Module Code is: " + code);
+    }
+    public void getTitle() {
+        System.out.println("Module Title is: " + title);
+    }
+    public void getCredit() {
+        System.out.println("Module Credit is: " +credit);
+    }
 
+    /**
+     * Uses all of the above methods to print out all the details
+     */
     public void getDetails() {
         getCode();
         getTitle();

@@ -42,7 +42,7 @@ public class Course
             System.out.println(" Module: "+ module.title);
             System.out.println(" Code: "+ module.code);
             System.out.println(" Credit: "+ module.credit);
-        }
+        } else { System.out.println("No Module Set");}
         System.out.println();
     }
     
