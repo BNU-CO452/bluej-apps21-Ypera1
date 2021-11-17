@@ -1,0 +1,21 @@
+Product S21 = new Product(1, "S21");
+StockList LIST = new StockList();
+S21.print();
+ ID 1: S21 stock level: 0
+S21.increaseQuantity(50);
+S21.print();
+ ID 1: S21 stock level: 50
+S21.decreaseQuantity(25);
+S21.print();
+ ID 1: S21 stock level: 25
+Product S22 = new Product(2, "S22");
+LIST.add(S21);
+LIST.add(S22);
+LIST.print();
+
+ Peacock's Stock List
+ ====================
+
+ ID 1: S21 stock level: 25
+ ID 2: S22 stock level: 0
+

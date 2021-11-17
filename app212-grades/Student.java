@@ -42,34 +42,16 @@ public class Student
     {
         marks.add(mark);
     }
-    
-    /**
-     * Find the module by the moduleCode and
-     * set its mark to the value
-     */
-    public void awardMark(String moduleCode, int value)
-    {
-
-    }
-    
+        
     /**
      * Set the student's course
      */
     public void enrol(Course course)
     {
         this.course = course;
-        awardTestMarks();
     }
     
-    /**
-     * Award a different pass mark for each of the
-     * modules on the enrolled course
-     */
-    public void awardTestMarks()
-    {
-        
-    }
-    
+
     /**
      * Return the full name of this student.
      */
@@ -102,16 +84,12 @@ public class Student
         course.print();
     }
     
-    private void printModules()
-    {
-
-    }
     
     public void printTranscript()
     {
         System.out.println(" ------------------------------------");
         System.out.println(" App21-02: Exam Board Transcript 2021");
-        System.out.println("        by student name");
+        System.out.println("        by Connor Martin");
         System.out.println(" ------------------------------------");
         
         printCourse();
@@ -123,12 +101,10 @@ public class Student
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
         
        
-        Grades finalGrade = course.calculateGrade(marks);
+        String finalGrade = calculateGrade(marks).name();
         
-        System.out.println();
-        System.out.println();
-        
-        if(finalGrade == Grades.NS)
+        course.printModules();
+        if(finalGrade == "0")
         {
             System.out.println(" No Final Course Grade Yet!");
         }
@@ -136,5 +112,39 @@ public class Student
         {
             System.out.println(" Final Course Grade = " + finalGrade);
         }
+    }
+        /**
+     * Converts a score to a grade
+     */
+    public Grades convertToGrade(int mark)
+    {
+        if(mark > 70) {
+            return Grades.A;
+        }
+        else if (mark > 60) {
+            return Grades.B;
+        }
+        else if (mark > 50) {
+            return Grades.C;
+        }
+        else if (mark > 40) {
+            return Grades.D;
+        }
+        else if (mark > 30) {
+            return Grades.F;
+        }
+        else {
+            return Grades.NS;
+        }
+    }
+    
+    /**
+     * Calculate the average mark from the four module marks
+     * and convert that into a final grade.
+     */
+    public Grades calculateGrade(ArrayList<ModuleMark> marks)
+    {
+        int totalMarks = marks.stream().mapToInt(ModuleMark::getValue).sum();
+        return convertToGrade(totalMarks);
     }
 }

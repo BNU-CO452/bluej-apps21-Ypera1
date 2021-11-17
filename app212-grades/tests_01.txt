@@ -1,0 +1,30 @@
+Student Connor = new Student("Connor Martin", 202);
+Course software = new Course("BSC101", "Software Engineering");
+Connor.enrol(software);
+Connor.printCourse();
+ Student ID: 202, Connor Martin
+
+ Course BSC101: Software Engineering
+
+Module programming_mod = new Module("101", "C0452 Programming");
+software.addModule(programming_mod);
+ModuleMark moduleMa1 = new ModuleMark(programming_mod);
+moduleMa1.setMark(20);
+Connor.addMark(moduleMa1);
+Connor.printTranscript();
+ ------------------------------------
+ App21-02: Exam Board Transcript 2021
+        by student name
+ ------------------------------------
+ Student ID: 202, Connor Martin
+
+ Course BSC101: Software Engineering
+
+
+
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+ Code 	 Module 		Credit	 Mark 	 Grade
+ ---- 	 -------------------- 	 ------	 ---- 	 -----
+
+
+ No Final Course Grade Yet!

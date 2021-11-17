@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  * Demonstrate the StockManager and Product classes.
  * The demonstration becomes properly functional as
@@ -10,22 +10,27 @@
 public class StockDemo
 {
     // The stock manager.
-    private StockList stock;
+    private StockList stocklist;
 
     /**
      * Create a StockManager and populate it with at least
      * 10 sample products.
      */
-    public StockDemo(StockList stock)
+    public StockDemo(StockList stocklist)
     {
-        this.stock = stock;
-        
+        this.stocklist = stocklist;
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
-        
-        stock.add(new Product(101, "Samsung Galaxy S20"));
-        stock.add(new Product(102, "Apple iPhone 12"));
-        stock.add(new Product(103, "Google Pixel 4A"));
+        stocklist.add(new Product(101, "Samsung Galaxy S20"));
+        stocklist.add(new Product(102, "Apple iPhone 12"));
+        stocklist.add(new Product(103, "Google Pixel 4A"));
+        stocklist.add(new Product(104, "Product 104"));
+        stocklist.add(new Product(105, "Product 105"));
+        stocklist.add(new Product(106, "Product 106"));
+        stocklist.add(new Product(107, "Product 107"));
+        stocklist.add(new Product(108, "Product 108"));
+        stocklist.add(new Product(109, "Product 109"));
+        stocklist.add(new Product(110, "Product 110"));
     }
     
     /**
@@ -38,21 +43,33 @@ public class StockDemo
     public void runDemo()
     {
         // Show details of all of the products before delivery.
-        
-        stock.print();
+        stocklist.printHeading();
+        stocklist.print();
 
         buyProducts();
-        stock.print();        
+        stocklist.print();
 
         sellProducts();
-        stock.print();        
+        stocklist.print();
     }
     
     private void buyProducts()
     {
+        //generates a random number object
+        Random rand = new Random();
+        for(Product product : stocklist.stock) {
+            int id =  product.getID();
+            stocklist.buyProduct(id, (rand.nextInt(9 - 1) + 1));
+        }
     }
 
     private void sellProducts()
     {
+        //generates a random number object
+        Random rand = new Random();
+        for(Product product : stocklist.stock) {
+            int id =  product.getID();
+            stocklist.sellProduct(id,(rand.nextInt(9 - 1) + 1));
+        }
     }    
 }
