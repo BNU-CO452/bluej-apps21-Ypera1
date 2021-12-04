@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * This app provides a user interface to the
  * stock manager so that users can add, edit,
@@ -13,14 +13,17 @@ public class StockApp
     
     private ProductList stock;
     
+    private Product product;
+    
     /**
      * Constructor for objects of class StockApp
      */
     public StockApp()
     {
         reader = new InputReader();
+
         stock = new ProductList();
-        //StockDemo demo = new StockDemo(stock);
+        //StockDemo demo = new StockDeo(stock);
     }
 
     /**
@@ -50,13 +53,15 @@ public class StockApp
         }
         else if(choice.equals("print"))
         {
-            //stock.print();
+            for (Product product : stock.stock) {
+                System.out.println(product);
+            }
         }
         else if(choice.startsWith("add "))
         {
             choice = choice.substring(4);
+            String[] splited = choice.split("\\s+");
             if ( Character.isDigit(choice.charAt(0)) ) {
-                String[] splited = choice.split("\\s+");
                 product = new Product(Integer.parseInt(splited[0]),splited[1]);
                 stock.add(product);
             }
@@ -69,7 +74,24 @@ public class StockApp
         }
         else if(choice.startsWith("remove "))
         {
-            //stock.print();
+            choice = choice.substring(7);
+            stock.remove(Integer.parseInt(choice));
+        }
+        else if(choice.startsWith("buy "))
+        {
+            choice = choice.substring(4);
+            String[] splited = choice.split("\\s+");
+            if ( Character.isDigit(choice.charAt(0)) ) {
+                stock.buyProduct(Integer.parseInt(splited[0]),Integer.parseInt(splited[1]));
+            }
+        }
+        else if(choice.startsWith("sell "))
+        {
+            choice = choice.substring(4);
+            String[] splited = choice.split("\\s+");
+            if ( Character.isDigit(choice.charAt(0)) ) {
+                stock.sellProduct(Integer.parseInt(splited[0]),Integer.parseInt(splited[1]));
+            }
         }
         else
         {
@@ -88,6 +110,8 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product, enter the desired ID (a number) then the name of the Product");
         System.out.println("    Remove:     Remove an old product");
+        System.out.println("    Buy:     Buys the specified quantity of products, specify ID then product quantity");
+        System.out.println("    Sell:     Sells the specified quantity of products, specify ID then product quantity");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
