@@ -87,6 +87,14 @@ public class ProductList {
         }
     }
 
+    public void restockProducts(int level) {
+        for (Product product : stock) {
+            if(product.getQuantity() <= level) {
+                product.setQuantity(level);
+            }
+        }
+    }
+
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not

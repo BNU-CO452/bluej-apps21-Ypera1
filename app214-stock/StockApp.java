@@ -61,7 +61,12 @@ public class StockApp
         {
             choice = choice.substring(4);
             String[] splited = choice.split("\\s+");
-            if ( Character.isDigit(choice.charAt(0)) ) {
+            if (stock.findProduct(Integer.parseInt(splited[0])) != null) {
+                System.out.println();
+                System.out.println("    "+splited[0]+" is already present in the system");
+                System.out.println();
+            }
+            else if ( Character.isDigit(choice.charAt(0)) ) {
                 product = new Product(Integer.parseInt(splited[0]),splited[1]);
                 stock.add(product);
             }
@@ -75,7 +80,14 @@ public class StockApp
         else if(choice.startsWith("remove "))
         {
             choice = choice.substring(7);
-            stock.remove(Integer.parseInt(choice));
+            if (stock.findProduct(Integer.parseInt(choice)) == product) {
+                stock.remove(Integer.parseInt(choice));
+            }
+            else {
+                System.out.println();
+                System.out.println("    "+choice+" is not a valid product");
+                System.out.println();
+            }
         }
         else if(choice.startsWith("buy "))
         {
@@ -87,10 +99,43 @@ public class StockApp
         }
         else if(choice.startsWith("sell "))
         {
-            choice = choice.substring(4);
+            choice = choice.substring(5);
             String[] splited = choice.split("\\s+");
             if ( Character.isDigit(choice.charAt(0)) ) {
                 stock.sellProduct(Integer.parseInt(splited[0]),Integer.parseInt(splited[1]));
+            }
+        }
+        else if(choice.startsWith("search "))
+        {
+            choice = choice.substring(7);
+            stock.listProductsbyPhrase(choice);
+        }
+        else if(choice.startsWith("low stock "))
+        {
+            choice = choice.substring(10);
+            if(Character.isDigit(choice.charAt(0)))
+            {
+                stock.listProductsbyLackofStock(Integer.parseInt(choice));
+            }
+            else
+            {
+                System.out.println();
+                System.out.println("    "+choice+" is not a valid number");
+                System.out.println();
+            }
+        }
+        else if(choice.startsWith("restock "))
+        {
+            choice = choice.substring(8);
+            if(Character.isDigit(choice.charAt(0)))
+            {
+                stock.restockProducts(Integer.parseInt(choice));
+            }
+            else
+            {
+                System.out.println();
+                System.out.println("    "+choice+" is not a valid number");
+                System.out.println();
             }
         }
         else
@@ -110,9 +155,12 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product, enter the desired ID (a number) then the name of the Product");
         System.out.println("    Remove:     Remove an old product");
-        System.out.println("    Buy:     Buys the specified quantity of products, specify ID then product quantity");
-        System.out.println("    Sell:     Sells the specified quantity of products, specify ID then product quantity");
+        System.out.println("    Buy:        Buys the specified quantity of products, specify ID then product quantity");
+        System.out.println("    Sell:       Sells the specified quantity of products, specify ID then product quantity");
         System.out.println("    Print:      Print all products");
+        System.out.println("    Search:     Finds products with the phrase inputted");
+        System.out.println("    Low Stock:  Specify a number and all products with stock below that will be printed");
+        System.out.println("    Restock:    Specify a number and all products with stock below that will be have their stock set to that level");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
     }
@@ -124,7 +172,7 @@ public class StockApp
     {
         System.out.println("********************************");
         System.out.println("  App21-04: Stock Application ");
-        System.out.println("      by Student Name");
+        System.out.println("      by Connor Martin");
         System.out.println("********************************");
     }
 }
