@@ -11,7 +11,6 @@ public class Course
     public final static int MAXN_MODULES = 4;
     
     public ArrayList<Module> modules;
-    
     private String code;
     private String title;
     
@@ -30,21 +29,9 @@ public class Course
         // initialise instance variables
         this.code = code;
         this.title = title;
-        
         modules  = new ArrayList<Module>();
-        
-        createModules();
     }
 
-    /**
-     * Create four modules and add them to the
-     * modules list for testing purposes.  These
-     * must be your four modules.
-     */
-    public void createModules()
-    {
-
-    }
     
     public void addModule(Module module)
     {
@@ -54,22 +41,6 @@ public class Course
         }
     }
     
-    /**
-     * 
-     */
-    public Grades convertToGrade(int mark)
-    {
-        return Grades.NS;
-    }
-    
-    /**
-     * Calculate the average mark from the four module marks
-     * and convert that into a final grade.
-     */
-    public Grades calculateGrade(ArrayList<ModuleMark> marks)
-    {
-        return Grades.NS;
-    }
     
     /**
      * Prints out the details of a course and the
@@ -89,6 +60,9 @@ public class Course
      */
     public void printModules()
     {
-        System.out.println();
+        for(Module strTemp: modules){
+            strTemp.print();
+            strTemp.printCredit();
+        }
     }
 }

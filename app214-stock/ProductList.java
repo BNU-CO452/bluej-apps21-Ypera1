@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Connor Martin
  * @version 08/11/2021
  */
-public class StockList {
+public class ProductList {
     // A list of the products.
     public ArrayList<Product> stock;
     // Stores user name for individual stock list
@@ -16,9 +16,8 @@ public class StockList {
     /**
      * Initialise the stock manager.
      */
-    public StockList(String name) {
+    public ProductList() {
         stock = new ArrayList<Product>();
-        this.name = name;
     }
 
     /**
@@ -35,7 +34,6 @@ public class StockList {
             stock.remove(product);
         }
     }
-
     /**
      * Buy a quantity of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -60,6 +58,7 @@ public class StockList {
             findProduct(productID).decreaseQuantity(amount);
         }
     }
+
 
     /**
      * Find a product to match the product id,
@@ -88,30 +87,13 @@ public class StockList {
         }
     }
 
-    /**
-     * Sell one of the given product.
-     * Show the before and after status of the product.
-     *
-     * @param id The ID of the product being sold.
-     */
-    public void sellProduct(int productId) {
-        Product product = findProduct(productId);
-
-        if (product != null) {
-            if (numberInStock(productId) > 0) {
-                product.decreaseQuantity(1);
-                // printout message
-                System.out.println(product.getName() + "'s stock reduced by 1");
-            } else {
-                // printout message
-                System.out.println(product.getName() + " already sold out");
+    public void restockProducts(int level) {
+        for (Product product : stock) {
+            if(product.getQuantity() <= level) {
+                product.setQuantity(level);
             }
-        } else {
-            // printout message
-            System.out.println(productId + " Not Found");
         }
     }
-
 
     /**
      * Locate a product with the given ID, and return how
@@ -140,24 +122,24 @@ public class StockList {
         }
     }
 
-    /**
-     * Print out each product in the stock
-     * in the order they are in the stock list
-     */
-    public void print() {
-        printHeading();
-
-        for (Product product : stock) {
-            System.out.println(product);
-        }
-
-        System.out.println();
-    }
-
-    public void printHeading() {
-        System.out.println();
-        System.out.println(name + "'s Stock List");
-        System.out.println(" ====================");
-        System.out.println();
-    }
+//    /**
+//     * Print out each product in the stock
+//     * in the order they are in the stock list
+//     */
+//    public void print() {
+//        printHeading();
+//
+//        for (Product product : stock) {
+//            System.out.println(product);
+//        }
+//
+//        System.out.println();
+//    }
+//
+//    public void printHeading() {
+//        System.out.println();
+//        System.out.println(name + "'s Stock List");
+//        System.out.println(" ====================");
+//        System.out.println();
+//    }
 }

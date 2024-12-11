@@ -1,0 +1,200 @@
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > print
+ ID 1: biscuit stock level: 50
+ ID 2: cookies stock level: 0
+ ID 3: no stock level: 0
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > sell 1 20
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > print
+ ID 1: biscuit stock level: 30
+ ID 2: cookies stock level: 0
+ ID 3: no stock level: 0
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > search cookies
+ ID 2: cookies stock level: 0
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > search bis
+ ID 1: biscuit stock level: 30
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > search c
+ ID 1: biscuit stock level: 30
+ ID 2: cookies stock level: 0
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > buy 2 20
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > print
+ ID 1: biscuit stock level: 30
+ ID 2: cookies stock level: 20
+ ID 3: no stock level: 0
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > low stock 20
+ ID 2: cookies stock level: 20
+ ID 3: no stock level: 0
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > restock 20
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > print
+ ID 1: biscuit stock level: 30
+ ID 2: cookies stock level: 20
+ ID 3: no stock level: 20
+********************************
+  App21-04: Stock Application 
+      by Connor Martin
+********************************
+
+    Add:        Add a new product, enter the desired ID (a number) then the name of the Product
+    Remove:     Remove an old product
+    Buy:        Buys the specified quantity of products, specify ID then product quantity
+    Sell:       Sells the specified quantity of products, specify ID then product quantity
+    Print:      Print all products
+    Search:     Finds products with the phrase inputted
+    Low Stock:  Specify a number and all products with stock below that will be printed
+    Restock:    Specify a number and all products with stock below that will be have their stock set to that level
+    Quit:       Quit the program
+
+Please enter your choice > 

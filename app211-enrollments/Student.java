@@ -26,24 +26,27 @@ public class Student
     }
 
     /**
-     * Return the full name of this student.
+     * Prints the full name of this student in the terminal
      */
-    public String getName()
+    public void getName()
     {
-        return name;
+        System.out.println("Name of Student is: "+ name);
     }
 
      /**
-     * Return the student ID of this student.
+     * Prints the student ID of this student in the terminal
      */
-    public int getID()
+    public void getID()
     {
-        return id;
+        System.out.println("Student's ID is: "+ id);
     }
-
+    /** 
+     * Enroles student on specified availible courses)
+     */
     public void enrol(Course course)
     {
         this.course = course;
+        System.out.println("Enroled on Course: "+ course.title);
     }
     
     /**
@@ -54,8 +57,16 @@ public class Student
         System.out.println(" Student ID: " + id + " Name: " + name);
     }
     
+    /**
+     * Print the details of the course, the list
+     * of students enrolled and the module
+     * Inherited from Course
+     */
     public void printCourse()
     {
-        course.print();
+        if(course != null) { course.print(); } 
+        else { System.out.println("No Course Found");   
+        }
     }
 }
+

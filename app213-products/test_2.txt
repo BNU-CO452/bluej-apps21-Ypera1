@@ -1,0 +1,127 @@
+StockList stockLis1 = new StockList("Connor");
+StockDemo stockDem1 = new StockDemo(stockLis1);
+Product product1 = new Product(1, "Samsung S1");
+Product product2 = new Product(2, "Samsung S10");
+Product product3 = new Product(3, "Samsung S11");
+Product product4 = new Product(4, "iPhone 9");
+Product product5 = new Product(5, "iPhone 5");
+Product product6 = new Product(6, "Pixel 9");
+Product product7 = new Product(7, "Pixel 2");
+Product product8 = new Product(8, "Pixel 10");
+Product product9 = new Product(9, "Blackberry 10");
+Product product10 = new Product(10, "Blackberry 9");
+stockLis1.add(product1);
+stockLis1.add(product2);
+stockLis1.add(product3);
+stockLis1.add(product4);
+stockLis1.add(product5);
+stockLis1.add(product6);
+stockLis1.add(product7);
+stockLis1.add(product8);
+stockLis1.add(product9);
+stockLis1.add(product10);
+stockDem1.runDemo();
+
+Connor's Stock List
+ ====================
+
+
+Connor's Stock List
+ ====================
+
+ ID 101: Samsung Galaxy S20 stock level: 0
+ ID 102: Apple iPhone 12 stock level: 0
+ ID 103: Google Pixel 4A stock level: 0
+ ID 104: Product 104 stock level: 0
+ ID 105: Product 105 stock level: 0
+ ID 106: Product 106 stock level: 0
+ ID 107: Product 107 stock level: 0
+ ID 108: Product 108 stock level: 0
+ ID 109: Product 109 stock level: 0
+ ID 110: Product 110 stock level: 0
+ ID 1: Samsung S1 stock level: 0
+ ID 2: Samsung S10 stock level: 0
+ ID 3: Samsung S11 stock level: 0
+ ID 4: iPhone 9 stock level: 0
+ ID 5: iPhone 5 stock level: 0
+ ID 6: Pixel 9 stock level: 0
+ ID 7: Pixel 2 stock level: 0
+ ID 8: Pixel 10 stock level: 0
+ ID 9: Blackberry 10 stock level: 0
+ ID 10: Blackberry 9 stock level: 0
+
+
+Connor's Stock List
+ ====================
+
+ ID 101: Samsung Galaxy S20 stock level: 2
+ ID 102: Apple iPhone 12 stock level: 5
+ ID 103: Google Pixel 4A stock level: 2
+ ID 104: Product 104 stock level: 1
+ ID 105: Product 105 stock level: 8
+ ID 106: Product 106 stock level: 4
+ ID 107: Product 107 stock level: 4
+ ID 108: Product 108 stock level: 3
+ ID 109: Product 109 stock level: 8
+ ID 110: Product 110 stock level: 7
+ ID 1: Samsung S1 stock level: 3
+ ID 2: Samsung S10 stock level: 6
+ ID 3: Samsung S11 stock level: 4
+ ID 4: iPhone 9 stock level: 4
+ ID 5: iPhone 5 stock level: 6
+ ID 6: Pixel 9 stock level: 6
+ ID 7: Pixel 2 stock level: 7
+ ID 8: Pixel 10 stock level: 3
+ ID 9: Blackberry 10 stock level: 5
+ ID 10: Blackberry 9 stock level: 5
+
+
+Connor's Stock List
+ ====================
+
+ ID 101: Samsung Galaxy S20 stock level: 0
+ ID 102: Apple iPhone 12 stock level: 2
+ ID 103: Google Pixel 4A stock level: 2
+ ID 104: Product 104 stock level: 1
+ ID 105: Product 105 stock level: 0
+ ID 106: Product 106 stock level: 2
+ ID 107: Product 107 stock level: 1
+ ID 108: Product 108 stock level: 1
+ ID 109: Product 109 stock level: 2
+ ID 110: Product 110 stock level: 1
+ ID 1: Samsung S1 stock level: 3
+ ID 2: Samsung S10 stock level: 0
+ ID 3: Samsung S11 stock level: 3
+ ID 4: iPhone 9 stock level: 2
+ ID 5: iPhone 5 stock level: 4
+ ID 6: Pixel 9 stock level: 0
+ ID 7: Pixel 2 stock level: 4
+ ID 8: Pixel 10 stock level: 3
+ ID 9: Blackberry 10 stock level: 3
+ ID 10: Blackberry 9 stock level: 5
+
+stockLis1.remove(2);
+stockLis1.listProductsbyPhrase("Samsung");
+ ID 101: Samsung Galaxy S20 stock level: 0
+ ID 1: Samsung S1 stock level: 3
+ ID 3: Samsung S11 stock level: 3
+stockLis1.listProductsbyLackofStock(5);
+ ID 101: Samsung Galaxy S20 stock level: 0
+ ID 102: Apple iPhone 12 stock level: 2
+ ID 103: Google Pixel 4A stock level: 2
+ ID 104: Product 104 stock level: 1
+ ID 105: Product 105 stock level: 0
+ ID 106: Product 106 stock level: 2
+ ID 107: Product 107 stock level: 1
+ ID 108: Product 108 stock level: 1
+ ID 109: Product 109 stock level: 2
+ ID 110: Product 110 stock level: 1
+ ID 1: Samsung S1 stock level: 3
+ ID 3: Samsung S11 stock level: 3
+ ID 4: iPhone 9 stock level: 2
+ ID 5: iPhone 5 stock level: 4
+ ID 6: Pixel 9 stock level: 0
+ ID 7: Pixel 2 stock level: 4
+ ID 8: Pixel 10 stock level: 3
+ ID 9: Blackberry 10 stock level: 3
+ ID 10: Blackberry 9 stock level: 5
